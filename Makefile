@@ -11,3 +11,6 @@ init:
 	cp .env.example .env
 	$(MAKE) install
 	$(MAKE) run
+
+test:
+	pytest
