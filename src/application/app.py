@@ -21,10 +21,6 @@ def create_app():
     for controller in controllers:
         app.include_router(controller.router, prefix=PATH)
 
-    # Start Scheduler if not in testing mode
-    # if settings.app_env != AppEnv.testing:
-    #     scheduler.start()
-
     @app.get(f"{PATH}/info")
     async def _():
         return [settings.app_env]
