@@ -1,12 +1,19 @@
-### Installation:
+FastAPI + SQLAlchemy + Dependency Injector Example
+==================================================
 
-`make init`
-`vim .env`
+   - make init
+   - make run
 
-`python3 -m venv ./` to separate project dependencies from global packets and installs
+Build the Docker image:
+   - docker-compose build
 
-*todo*:
-1. tests
-2. database layer
-3. repositories
-4. views and templating
+Run the docker-compose environment:
+   - docker-compose up
+
+##### Test
+   docker-compose run --rm webapp py.test webapp/tests.py --cov=webapp
+
+
+<i> This is a `FastAPI <https://fastapi.tiangolo.com/>`
+`SQLAlchemy <https://www.sqlalchemy.org/>`
+`Dependency Injector <https://python-dependency-injector.ets-labs.org/>`_ example application. </i>
